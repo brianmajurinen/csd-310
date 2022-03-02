@@ -5,7 +5,7 @@
 import sys
 import mysql.connector
 
-#database config. I've had trouble with adding users so I'm using root
+#database config. I've had trouble with adding users. Please add your password in the password field for this to work
 config = {
     "user": "root",
     "password": "!M!ysql123",
