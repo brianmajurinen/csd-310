@@ -1,4 +1,5 @@
-use testdb;
+CREATE DATABASE whatabook;
+use whatabook;
 
 CREATE TABLE store (
     store_id    INT             NOT NULL    AUTO_INCREMENT,
