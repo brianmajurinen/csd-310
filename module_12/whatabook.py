@@ -5,10 +5,10 @@
 import sys
 import mysql.connector
 
-#database config. I've had trouble with adding users. Please add your password in the password field for this to work
+#database config
 config = {
-    "user": "root",
-    "password": "!M!ysql123",
+    "user": "whatabook_user",
+    "password": "MySQL8IsGreat!",
     "host": "127.0.0.1",
     "database": "whatabook",
     "raise_on_warnings": True
