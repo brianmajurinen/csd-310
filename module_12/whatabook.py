@@ -4,8 +4,9 @@
 
 import sys
 import mysql.connector
+from mysql.connector import errorcode
 
-#database config
+#database config. I've had trouble with adding users so I'm using root
 config = {
     "user": "whatabook_user",
     "password": "MySQL8IsGreat!",
@@ -190,6 +191,18 @@ try:
         user_selection = show_menu()
 
     print("\n\n  Program terminated...")
+
+#Error codes
+except mysql.connector.Error as err:
+ 
+    if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+        print("Unauthorized access to database")
+
+    elif err.errno == errorcode.ER_BAD_DB_ERROR:
+        print("Database does not exist")
+
+    else:
+        print(err)
 
 finally:
     """ close the connection to MySQL """
