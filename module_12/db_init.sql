@@ -1,6 +1,9 @@
 CREATE DATABASE whatabook;
 use whatabook;
 
+DROP USER IF EXISTS 'whatabook_user'@'localhost';
+CREATE USER 'whatabook_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'MySQL8IsGreat!';
+GRANT ALL PRIVILEGES ON whatabook.* TO'whatabook_user'@'localhost';
 CREATE TABLE user (
     user_id         INT         NOT NULL    AUTO_INCREMENT,
     first_name      VARCHAR(75) NOT NULL,
